@@ -1,0 +1,83 @@
+#include<bits/stdc++.h>
+using namespace std; 
+class student
+{ 
+public:
+string name; 
+int roll; 
+string clas;
+string division; 
+long int date; 
+string blood; 
+string adress; 
+long int tno; 
+long int drilicens; 
+student() 
+{ 
+name="defult"; 
+roll=0; 
+clas="defult"; 
+division="defult"; 
+date=0; 
+blood="defult"; 
+adress="defult"; 
+tno=0; 
+drilicens=0; 
+} 
+student(student &s) 
+{ 
+name=s.name; 
+roll = s.roll; 
+clas = s.clas; 
+division = s.division; 
+date = s.date; 
+blood = s.blood; 
+adress = s.adress; 
+tno = s.tno; 
+drilicens = s.drilicens; 
+} 
+void getdata() 
+{ 
+ cout<<"enter your ----- name\n"<<endl; 
+ cin>>name; 
+ cout<<"enter your ----- roll\n"<<endl; 
+ cin>>roll; 
+ cout<<"enter your ----- class\n"<<endl; 
+ cin>>clas; 
+ cout<<"enter your ----- division\n"<<endl; 
+ cin>>division; 
+ cout<<"enter your ----- date\n"<<endl; 
+ cin>>date; 
+ cout<<"enter your ----- blood\n"<<endl; 
+ cin>>blood; 
+ cout<<"enter your ----- adress\n"<<endl;
+ cin>>adress; 
+  cout<<"enter your ----- tno\n"<<endl; 
+   cin>>tno; 
+    cout<<"enter your ----- drilicens\n"<<endl; 
+     cin>>drilicens; 
+     } 
+     void showdata() 
+     { 
+     cout<<"@@@@@@@@@@ Data you enter @@@@@@@@@@"; 
+     cout<<"the ---- of student is"<<name<<endl; 
+     cout<<"the ---- of student is"<<roll<<endl; 
+     cout<<"the ---- of student is"<<clas<<endl; 
+     cout<<"the ---- of student is"<<division<<endl; 
+     cout<<"the ---- of student is"<<date<<endl; 
+     cout<<"the ---- of student is"<<blood<<endl; 
+     cout<<"the ---- of student is"<<adress<<endl; 
+     cout<<"the ---- of student is"<<tno<<endl; 
+     cout<<"the ---- of student is"<<drilicens<<endl; 
+     } 
+     }; 
+     int main() 
+     { 
+      // student obj;
+       // obj.getdata();
+        // obj.showdata();
+        student*s= new student(); 
+        s -> getdata(); 
+        s -> showdata(); 
+        return 0; 
+        }
