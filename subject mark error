@@ -1,0 +1,67 @@
+
+#include<iostream>
+using namespace std; 
+class student
+{ 
+public:
+int n; 
+char str[30]; 
+double osa; 
+double em; 
+double oop; 
+double ds; 
+double sem; 
+double ave; 
+double per; 
+void name() 
+{ 
+cout<<"Enter yout name"; 
+cin>>str; 
+cout<<str; 
+} 
+void roll() 
+{ 
+cout<<"Enter your roll no"; 
+cin>>n; 
+} 
+void data(){ 
+cout<<str<<endl; 
+cout<<n; 
+} 
+void marks(){ 
+ cout<<"**********Enter the data**********"; 
+ cout<<"Enter ---- subject marks"; 
+ cin>>osa; 
+ cout<<"Enter ---- subject marks"; 
+ cin>>em; 
+ cout<<"Enter ---- subject marks"; 
+ cin>>oop; 
+ cout<<"Enter ---- subject marks"; 
+ cin>>ds; 
+ cout<<"Enter ---- subject marks";
+ cin>>sem; 
+ } 
+ void average(){ 
+  double sa; 
+   ave=osa+em+oop+ds+sem; 
+    cout<<ave<<endl; 
+     sa=ave/5.0; 
+      cout<<sa<<endl; 
+      } 
+      void percentage(){ 
+       int total=osa+em+ds+oop+sem; 
+        per=(total*100)/500; 
+         cout<<per<<endl; 
+         } 
+         }; 
+         int main() 
+         { 
+          student obj; 
+           obj.name(); 
+            obj.roll(); 
+             obj.marks(); 
+              obj.data(); 
+               obj.average(); 
+                obj.percentage(); 
+                return 0; 
+                } 
