@@ -1,0 +1,73 @@
+
+#include<iostream>
+using namespace std; 
+class number
+{ 
+private:
+float real, imag; 
+public:
+number() 
+{ 
+real=0.0; 
+imag=0.0; 
+} 
+void insert() 
+{ 
+cout<<"Enter the real part"<<endl; 
+cin>>real; 
+cout<<"Enter the imagenary part"; 
+cin>>imag; 
+}
+void display(){ 
+cout<<"You Enter the equetion"<<endl; 
+cout<<"\n"<<real<<"+"<<imag<<"i"<<endl; 
+} 
+ number operator+(number c1) 
+ { 
+ number c3; 
+ c3.real = real + c1.real; 
+ c3.imag = imag + c1.imag; 
+ return c3; 
+ } 
+ number operator-(number c1) 
+ { 
+ number c4; 
+ c4.real = real - c1.real; 
+ c4.imag = imag - c1.imag; 
+ return c4; 
+ } 
+}; 
+int main(){ 
+ number c1,c2,c3,c4; 
+ int ch; 
+c1.insert(); 
+c2.insert(); 
+cout<<"you enter the equetion"; 
+c1.display(); 
+c2.display(); 
+do
+{ 
+cout<<"1.addition"; 
+cout<<"2.suntraction"; 
+cout<<"3.Exit"; 
+cout<<"Enter your choice"; 
+cin>>ch; 
+ switch(ch) 
+ { 
+ case 1: 
+ c3 = c1+c2; 
+ cout<<"the addition is"; 
+ c3.display(); 
+ break;
+ case 2: 
+ c4 = c1 - c2; 
+ cout<<"the subtraction is"; 
+ c4.display(); 
+ break; 
+ case 3: 
+ return 0; 
+ break; 
+ } 
+} 
+while(1); 
+}
