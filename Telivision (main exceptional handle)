@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std; 
+int main() 
+{ 
+ int price, model,size; 
+ try
+ { 
+ cout<<"enter the price\n"; 
+ cin>>price; 
+ cout<<"enter the model"; 
+ cin>>model; 
+ cout<<"enter the size"; 
+ cin>>size; 
+ if(model>999 || size<0 || size > 75 || price<0 || price > 500000) 
+ throw(100); 
+ else
+ { 
+ cout<<"The price of tv is"<<price<<endl; 
+ cout<<"The model of the tv is"<<model<<endl; 
+ cout<<"The size of tv is"<<size<<endl; 
+ } 
+ } 
+ catch(int n) 
+ { 
+ cout<<"exception occur\n"; 
+ model=0; 
+ price=0; 
+ size=0; 
+ cout<<"The price of tv is"<<price<<endl; 
+ cout<<"The model of the tv is"<<model<<endl;
+ cout<<"The size of tv is"<<size<<endl; 
+  } 
+  }
+ 
+ 
