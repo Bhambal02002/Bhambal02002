@@ -1,0 +1,79 @@
+#include<bits/stdc++.h>
+using namespace std; 
+class weather_report
+{ 
+ public:
+ int day; 
+ float htemp,ltemp,arain,asnow; 
+ void getdata(); 
+ void display(); 
+ weather_report() 
+{ 
+ day=99; 
+ htemp=0; 
+ ltemp=0; 
+ arain=0;
+ asnow=0; 
+} 
+}; 
+void weather_report::getdata() 
+{ 
+ cout<<"enter the day's"<<endl; 
+ cin>>day; 
+ cout<<"enter the higher temp"<<endl; 
+ cin>>htemp; 
+ cout<<"enter the lower temp"<<endl; 
+ cin>>ltemp; 
+ cout<<"enter the amount of rain"<<endl; 
+ cin>>arain; 
+ cout<<"enter the amount of snow"<<endl; 
+ cin>>asnow; 
+} 
+void weather_report::display() 
+{ 
+ cout<<day<<"\t\t"<<htemp<<"\t\t"<<ltemp<<"\t\t"<<arain<<"\t\t"<<asnow<<end
+l; 
+} 
+int main() 
+{ 
+ int ch,ans,d,i; 
+ float ah,ar,as,al,s,r,hh,hl; 
+ weather_report w[31]; 
+cout<<"Enter the no of days"; 
+cin>>d; 
+do
+{ 
+cout<<"\n\tMENU\n1.Insert data\n2.Display data"; 
+cin>>ch; 
+for(i=0;i<d;i++) 
+{ 
+ hh=hh+w[i].htemp; 
+ hl=hl+w[i].ltemp; 
+ r=r+w[i].arain; 
+ s=s+w[i].asnow; 
+} 
+ah=hh/d; 
+al=hl/d; 
+ar=r/d; 
+as=s/d;
+switch (ch) 
+ { 
+ case 1: 
+ for(i=0;i<d;i++) 
+ w[i].getdata(); 
+ break; 
+ case 2: 
+ cout << "Day\t Amt rain\t Amt snow\t High temp\t Low temp" << endl; 
+ for(i=0;i<d;i++) 
+ w[i].display(); 
+ cout<<"AVE\t\t"<<ar<<"\t\t"<<al<<"\t\t"<<ah<<"\t\t"<<as<<"\t\t"<<endl; 
+ default: 
+ cout<<"invalid chiose"; 
+ break; 
+ } 
+ cout<<"Do you want to continue?(0/1)"; 
+ cin>>ans; 
+} 
+while(ans != 0); 
+ return 0; 
+};
