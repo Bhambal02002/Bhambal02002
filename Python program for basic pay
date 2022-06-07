@@ -1,0 +1,14 @@
+
+basic_pay = float(input("Enter the salary"))
+hra = basic_pay*0.1
+ta = basic_pay*0.05
+
+gross_salary = basic_pay - hra
+gross_salary = gross_salary - ta
+
+#for professional tax
+prof = gross_salary*0.02
+gross_salary = gross_salary - prof
+in_hand = gross_salary
+print("salary in one month")
+print(in_hand)
