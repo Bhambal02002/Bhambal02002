@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std; 
+class book
+{ 
+public:
+char author[100]; 
+char title[100]; 
+char publi[100]; 
+char a[100]; 
+char b[100]; 
+int price; 
+int copy; 
+int c; 
+void getdata(){ 
+cout<<"enter the author name"; 
+cin>>author; 
+cout<<"enter the title"; 
+cin>>title; 
+cout<<"enter the publisher name"; 
+cin>>publi; 
+cout<<"enter the price"; 
+cin>>price; 
+cout<<"enter the no. of coppies present"; 
+cin>>copy; 
+} 
+void check(){ 
+ char a[100]; 
+ char b[100]; 
+ int c;
+ cout<<"enter the book author name you want"; 
+ cin>>a; 
+ cout<<"enter the book title you want"; 
+ cin>>b; 
+if(!strcmp(a,author) && !strcmp(b,title)){ 
+ cout<<"Congrachulation book find \n"; 
+ cout<<"enter the no of copy you want \n"; 
+ cin>>c; 
+ cout<<"the tottal price of "<<c<<" copy is "<<c*price<<endl; 
+} 
+else{ 
+ cout<<"book is nat available"<<endl; 
+} 
+} 
+}; 
+int main(){ 
+ book obj; 
+ obj.getdata(); 
+ obj.check(); 
+ return 0; 
+}
